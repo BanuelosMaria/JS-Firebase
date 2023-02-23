@@ -25,7 +25,7 @@ Grupo: SC8A
 
 **Introducción**
 ---
-<p En esta practica se planea trabajar con el lenguaje de programación JS agrupado con FireBase creando una aplicación para un consultorio dental en el cual se debe de ingresar los datos de los pacientes con su respectiva información para que con ayuda de Firebase crear una base de datos en la cual este almacenada y al mismo tiempo crear otra página en donde se pueda encontrar un paciente con base a cierta información de su expediente.> </p?
+En esta practica se planea trabajar con el lenguaje de programación JS agrupado con FireBase creando una aplicación para un consultorio dental en el cual se debe de ingresar los datos de los pacientes con su respectiva información para que con ayuda de Firebase crear una base de datos en la cual este almacenada y al mismo tiempo crear otra página en donde se pueda encontrar un paciente con base a cierta información de su expediente.
 
 **Firebase**
 ---

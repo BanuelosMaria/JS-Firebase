@@ -1,3 +1,4 @@
+//Variable con la cual se mandara a llamar a la base de datos Firebase
 var firebaseConfig = {
     apiKey: "AIzaSyDBhq28wdFlO9jnJ2I4Tw5edOjhbWujJq0",
     authDomain: "dentalcorona-42977.firebaseapp.com",
@@ -8,11 +9,11 @@ var firebaseConfig = {
     appId: "1:29960923092:web:54d504e7e0bc6038ee9841",
     measurementId: "G-15RSLW4P1L"
 };
-// Initialize Firebase
+// Inicializacion del firebase
 firebase.initializeApp(firebaseConfig);
 
-
-function resetFields(){
+//Funcion para borrar informacion de cada input al llamar el boton "limpiar"
+function borrar(){
     document.getElementById("Input0").value='';
     document.getElementById("Input1").value='';
     document.getElementById("Input2").value='';
@@ -25,7 +26,9 @@ function resetFields(){
     document.getElementById("Input9").value='selecciona';
 
 }
-function createR() {
+
+//Funcion para agregar los datos ingresados
+function agregar() {
     document.getElementById("Input0").disabled = false;
     var No_expediente = document.getElementById("Input0").value;
     var Nombre = document.getElementById("Input1").value;
@@ -39,7 +42,7 @@ function createR() {
     var Nacionalidad = document.getElementById("Input9").value;
 
 
-    //validaciones
+    //Validacion de datos en donde si el No. expediente es mas de 0
     if (No_expediente.length > 0) {
        
         var paciente = {
@@ -54,27 +57,22 @@ function createR() {
             Alergia,
             Nacionalidad,
         }
-
-        
-
         firebase.database().ref('Pacientes/' + No_expediente).update(paciente).then(() => {
-           resetFields();
+            borrar();
         }).then(()=>{
            read();
         });
 
-        swal("Listo!", "Agregado correctamente", "success");
-
-        
+        swal("Listo!", "Agregado correctamente", "success");  
     } 
     else {
         swal("Error", "Llena todos los campos","warning");
     }
 
-    document.getElementById("Input0").disabled = false;
-   
+    document.getElementById("Input0").disabled = false;   
 }
 
+//funcion para leer la tabla 1      
 function read(){
     document.getElementById("Table1").innerHTML='';
 
@@ -87,6 +85,7 @@ function read(){
 
 }
 
+//Insertar datos en las celdas de la tabla 1
 function printRow(paciente){
     
     if(paciente!=null){
@@ -122,6 +121,7 @@ function printRow(paciente){
     }
 }
 
+//Funcion para borrar los datos de la tabla
 function deleteR(No_expediente){
     firebase.database().ref('Pacientes/' + No_expediente).set(null).then(() => {
       read();
@@ -130,6 +130,7 @@ function deleteR(No_expediente){
     });
 }
 
+//Funcion para modificar en la tabla
 function seekR(No_expediente){
     var ref = firebase.database().ref('Pacientes/' + No_expediente);
     ref.on('value', function(snapshot) {
@@ -137,6 +138,7 @@ function seekR(No_expediente){
     });
 }
 
+//Funcion para actualizar
 function updateR(paciente){
     if(paciente!=null)
     {
@@ -155,7 +157,7 @@ function updateR(paciente){
     }
 }
 
-
+//Esta funcion lee los registros en la tabla 2
 function readQ(){
     document.getElementById("Table2").innerHTML='';
     var c = document.getElementById("Input10").value;
@@ -167,7 +169,7 @@ function readQ(){
 
 }
 
-
+//Funcion que inserta los datos a la tabla 2
 function printRowQ(paciente){
 
     var table = document.getElementById("Table2"); 

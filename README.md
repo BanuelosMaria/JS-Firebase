@@ -29,15 +29,12 @@ En esta practica se planea trabajar con el lenguaje de programación JS agrupado
 
 **Firebase**
 ---
-
+Es una plataforma para el desarrollo de alguna aplicación web o móvil que fue creada en el 2011 comenzando como lo que es una base de datos en tiempo real, no obstante, con el paso del tiempo se llegaron a agregar varias funciones que en parte fueron capaces de permitir agrupar los SDK de productos Google. Cuenta como función esencial el hacer de forma más simple la creación de tanto aplicaciones webs como móviles además de su desarrollo.
 
 Explicación de la practica
 ---
-HTML
-[Captura]
-<br>
-JS
-[Explicacion del codigo] 
+ 
 
 Conclusión
 ---
+El proyecto fue una actividad interesante en la cual se baso con el video de apoyo aportado por la profesora en la cual explico que es lo que hacía cada función además de crear una base de datos desde firebase y como conectarla con la aplicación y como es que desde los botones mandaba a llamar a las demás funciones que estaban enlazadas.

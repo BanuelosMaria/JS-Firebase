@@ -33,7 +33,7 @@ Es una plataforma para el desarrollo de alguna aplicación web o móvil que fue 
 
 Explicación de la practica
 ---
- 
+ El objetivo de la practica es crear un porgrama en la cual se pueda almacenar la la informacion y sea guardada en una base de datos en este caso de Firebase en la cual el porgrama que escogimos trata guardar la informacion de los pacientes de un consultorio dental. En la primera interfaz es donde se ingresas los datos y se puede pareciar cada captura de estas donde ahi mismo se es capaz de modificar o eliminar cada elemento y en la segunda pestaña se puede buscar a un paciente dependiendo si es "extranjero" o "Mexicano". *Capturas en la carpeta que dice caputuras*.
 
 Conclusión
 ---
